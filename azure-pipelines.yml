@@ -20,20 +20,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: AzureFunctionApp@1
-  inputs:
-    azureSubscription: <Azure service connection>
-    appType: functionAppLinux
-    appName: <Name of the Function app>
-    package: $(System.ArtifactsDirectory)/**/*.zip
-    deployToSlotOrASE: true
-    resourceGroupName: <Name of the resource group>
-    slotName: staging
-
-- task: AzureAppServiceManage@0
-  inputs:
-    azureSubscription: <Azure service connection>
-    WebAppName: <name of the Function app>
-    ResourceGroupName: <name of resource group>
-    SourceSlot: staging
-    SwapWithProduction: true
