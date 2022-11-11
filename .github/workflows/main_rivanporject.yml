@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'Rivanporject'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_026D92FB11CE4D3D9033BB6CCDD52A9D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CE6FBC0BBA204D72937ED3E3A5DE351A }}
           package: '*.war'
